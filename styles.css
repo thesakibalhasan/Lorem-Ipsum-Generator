@@ -1,0 +1,285 @@
+/* Global styles */
+body {
+    font-family: "Roboto", "RobotoDraft", "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #444a52;
+    overflow-x: hidden;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    body {
+      overflow-x: hidden;
+    }
+  
+    .copy {
+      width: 100px;
+      height: 50px;
+      margin-right: 1120px;
+      background-color: #11a8f0;
+      transition: 0.3s;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 30px;
+      border: none; /* Remove the border */
+    }
+  
+    .copy:hover {
+      background-color: #444a52;
+      transition: 0.3s;
+    }
+  
+    .flex {
+      display: flex;
+      text-align: center;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 10px;
+    }
+  }
+  
+  /* Navigation bar styles */
+  .navbar {
+    background-image: url("nav-logo.png"); /* Set the background image */
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain; /* Adjust background size as needed */
+    height: 60px; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
+    background-color: #677584;
+  }
+  
+  /* Style for the lorem text container */
+  #loremText {
+    border: 2px solid #677584; /* Add a border */
+    padding: 20px; /* Add padding */
+    background-color: #444a52; /* Add background color */
+    font-family: "Söhne", ui-sans-serif, system-ui, "-apple-system", "Segoe UI",
+      "Roboto", "Ubuntu", "Cantarell", "Noto Sans", sans-serif, "Helvetica Neue",
+      Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      "Noto Color Emoji";
+    font-size: larger;
+  }
+  
+  #loremText::selection{
+      background-color: #677584; /* Change selection background color */
+      color: #444a52; /* Change selection text color */
+  }
+  
+  /* Style for select elements */
+  select {
+    padding: 10px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    border: 2px solid #677584; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #444a52; /* Set background color */
+    color: #ccc; /* Set text color */
+  }
+  
+  /* Style for select elements when hovered */
+  select:hover {
+    border-color: #11a8f0; /* Change border color on hover */
+  }
+  
+  /* Style for select elements when focused */
+  select:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #11a8f0; /* Change border color when focused */
+    box-shadow: 0 0 5px #11a8f0; /* Add box shadow when focused */
+  }
+  
+  /* Style for input number */
+  input[type="number"] {
+    width: 150px; /* Increase width */
+    padding: 10px; /* Add padding */
+    border: 2px solid #677584; /* Add border */
+    background-color: #444a52; /* Change background color */
+    color: #fff; /* Change text color */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 5px; /* Add border radius */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    outline: none; /* Remove default focus outline */
+  }
+  
+  /* Style for input number when focused */
+  input[type="number"]:focus {
+    border-color: #11a8f0; /* Change border color on focus */
+  }
+  
+  /* Style for input number when error occurs */
+  input[type="number"].error {
+    border-color: #d98509; /* Change border color to red */
+  }
+  
+  /* Hide the spinner controls (up and down arrows) */
+  /* input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+  } */
+  
+  /* Style for the container border */
+  .container {
+    border: 2px solid #4f5c6b; /* Add a border */
+    padding: 20px; /* Add padding */
+    background-color: #677584; /* Add background color */
+    max-width: 600px; /* Adjust max-width as needed */
+    margin: auto; /* Center the container */
+    margin-top: 20px; /* Add top margin */
+  }
+  .flex {
+    justify-content: space-between;
+  
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    margin-right: 30px;
+  }
+  
+  /* Style for the container border */
+  .bordar {
+    border: 2px solid #4f5c6b; /* Add a border */
+    padding: 20px; /* Add padding */
+    background-color: #677584; /* Add background color */
+  }
+  
+  /* Style for the text */
+  .text {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    align-items: flex-end;
+    margin-bottom: 10px; /* Adjust margin-bottom to increase/decrease distance */
+  }
+  
+  .text::selection{
+      background-color: #444a52; /* Change selection background color */
+      color: #677584; /* Change selection text color */
+  }
+  
+  /* Copy button styles */
+  .copy {
+    width: calc(
+      102% - -3px
+    ); /* Adjust the width based on the container's border width */
+    height: 50px;
+    background-color: #11a8f0;
+    transition: 0.3s;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+    border: none;
+    padding: 0 2px; /* Adjust padding to maintain appearance */
+    display: block;
+  }
+  
+  .copy:hover {
+    background-color: #444a52;
+    transition: 0.3s;
+  }
+  
+  /* Media query for adjusting button size on smaller screens */
+  @media only screen and (max-width: 768px) {
+    .copy {
+      display: block;
+    }
+  }
+  
+  /* Media query for smaller screens (e.g., mobile devices) */
+  @media only screen and (max-width: 767px) {
+    .text {
+      flex-direction: column; /* Change to a column layout */
+      align-items: center; /* Center-align items */
+    }
+  }
+  
+  /* Media queries to adjust copy button visibility */
+  @media only screen and (max-width: 767px) {
+    .flex {
+      justify-content: space-between;
+  
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-size: 20px;
+      margin-right: 30px;
+      display: block;
+    }
+  }
+  
+  .hading {
+    text-align: center;
+    font-size: 75px;
+    font-family: "Oswald", sans-serif;
+    display: in;
+  }
+  
+  .color1 {
+    color: #11a8f0;
+  }
+  
+  .color2 {
+    color: #68940e;
+  }
+  
+  
+  .color2::selection{
+      color: #444a52;
+      background-color: #68940e;
+  }
+  
+  .gn {
+    width: 140px;
+    height: 45px;
+    margin-left: 11px;
+    background-color: #11a8f0;
+    transition: 0.3s;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 30px;
+    padding-bottom: 30px;
+    border: none; /* Remove the border */
+  }
+  
+  .gn:hover {
+    background-color: #444a52;
+    transition: 0.3s;
+  }
+  
+  ::-moz-selection {
+    /* Code for Firefox */
+    color: #444a52;
+    background: #11a8f0;
+  }
+  
+  ::selection {
+    color: #444a52;
+    background: #11a8f0;
+  }
+  
+
+  body::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  body::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+  }
+  body::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background-color: #677584;
+  }
+  body::-webkit-scrollbar-thumb,
+  body::-webkit-scrollbar-thumb {
+    background-color: #11a8f0;
+  }
+  body::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: #677584;
+  }
+  body::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track {
+    background: #677584;
+  }
+  
+  
+  

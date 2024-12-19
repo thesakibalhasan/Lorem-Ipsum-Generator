@@ -1,0 +1,81 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+      <title>Lorem Ipsum Generator</title>
+    <link href='https://fonts.googleapis.com/css?family=Iceberg' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IBM Plex Sans Arabic' rel='stylesheet'>
+    <link rel="icon" href="favicon-icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+    </style>
+</head>
+<body>
+     <!-- Container for border -->
+        <nav class="navbar">
+            <!-- Logo will be displayed as background image -->
+        </nav>
+
+        <h1 class="hading"><div class="color1">Lorem Ipsum <div class="color2">Generator</div></div></h1>
+        <div class="container">
+        <label for="generationType">Select generation type:</label>
+        <select id="generationType" onchange="toggleCertainWordsInput()">
+            <option value="word">Word</option>
+            <option value="sentence">Sentence</option>
+            <option value="paragraph">Paragraph</option>
+        </select>
+        <br><br>
+        <div id="certainWordsContainer" style="display: none;">
+            <label for="wordType">Select word type:</label>
+            <select id="wordType" onchange="toggleCertainWordsCountInput()">
+                <option value="uncertain">Uncertain Words</option>
+                <option value="certain">Certain Words</option>
+            </select>
+            <br><br>
+            <div id="certainWordsCountContainer" style="display: none;">
+                <label for="certainWordsCount">Enter the number of certain words per paragraph:</label>
+                <input type="number" id="certainWordsCount" name="certainWordsCount" min="1" value="50" oninput="validateWordCount()">
+                <p id="certainWordsCountError" style="color: #d98509; display: none;">Number of words must be 5 or more.</p>
+            </div>
+        </div>
+        <br><br>
+        <label for="count">Enter the number of items:</label>
+        <input type="number" id="count" name="count" min="1" value="50">
+        <button class="gn" onclick="generateLorem()">Generate</button>
+  <p id="errorMessage" style="color: #d98509; display: none;">Please enter a valid number.</p></div>
+
+      <br>
+        <div class="bordar"> <div class="flex"><h2 class="text">Your Lorem Epsom Is Ready</h2>
+            <br><p><div class="copyborder">
+                
+                <button class="copy" onclick="copyLorem()">Copy</button>
+            
+            </p></div></div>
+        <p id="loremText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi adipisci laboriosam asperiores minus, quidem ullam molestias assumenda est saepe. Quae, laudantium. Amet aut officia consequuntur minus quas eos error delectus laboriosam dicta, itaque voluptatem animi labore, maxime nostrum aspernatur, voluptatum officiis iste aperiam nam suscipit. Dolore rem voluptates omnis nesciunt.</p></div>
+     <!-- End of container -->
+    <script src="script.js"></script>
+
+    
+    <link rel="manifest" href="/manifest.json">
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(error) {
+        console.log('ServiceWorker registration failed: ', error);
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
+
